@@ -43,23 +43,31 @@ fits-all campaigns.
 ---
 
 ### 3. Triangle Counting and Customer Loyalty
-**[ADD YOUR TRIANGLE COUNT NUMBERS HERE]**
+- Total triangles in network: 717,719
+- Average triangles per node: 8.21
+- Node 14949 leads with 520 triangles
+- Node 4429 follows with 446 triangles
 
 **Business Implication:**
-Nodes with high triangle counts are embedded in tight, 
-interconnected clusters. In business terms, these customers 
-are part of highly loyal peer groups where purchase decisions 
-are mutually reinforced.
+The network contains 717,719 closed triangular relationships,
+with an average of 8.21 triangles per node — indicating a
+highly trust-embedded customer base overall.
 
-These nodes are ideal targets for:
-- Loyalty and retention campaigns
-- Premium membership offers
-- Word-of-mouth referral programs
+Nodes with the highest triangle counts are deeply embedded
+in tight peer clusters where purchase decisions mutually
+reinforce each other. These are not just influential customers
+— they are loyal ones.
 
-Targeting high-triangle nodes for retention is more cost 
-effective than acquiring new customers, since their 
-interconnected peers are likely to follow their behaviour.
+Most critically, Node 4429 appears in the top 10 of ALL
+three metrics — degree centrality, PageRank, and triangle
+count. This makes it the single highest priority node across
+every dimension of influence. It has wide reach, high quality
+connections, AND deep community embeddedness simultaneously.
 
+Node 14949 tells a different story — it ranks 1st in degree
+centrality and 1st in triangle count, but only 9th in
+PageRank. This means it has massive reach and is deeply
+embedded locally, but its connections
 ---
 
 ### 4. PageRank vs Degree Centrality — Strategic Distinction
