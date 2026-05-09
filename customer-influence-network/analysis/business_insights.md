@@ -1,68 +1,108 @@
-# Business Insights — Customer Influence Network
+# Customer Influence Network — Business Insights
 
-## Project Objective
-To identify high-value customer nodes in a co-purchase network using graph analytics,
-and translate structural network properties into actionable marketing strategies.
+## Dataset
+- Source: Amazon Co-Purchase Network (SNAP Stanford)
+- Nodes: 262,111 (customers/products)
+- Edges: 1,234,877 (co-purchase relationships)
 
 ---
 
 ## Key Findings
 
 ### 1. Top Influencer Nodes
-Nodes 4429 and 33 ranked in the top 10 for BOTH degree centrality and PageRank.
-This means they are not just widely connected — they are connected to other influential nodes.
+Nodes 4429 and 33 appeared in the top 10 of BOTH degree 
+centrality and PageRank rankings.
 
-**Business implication:**
-These are prime candidates for referral marketing programs. Targeting them first
-maximizes word-of-mouth reach at lower customer acquisition cost than broad campaigns.
+**Business Implication:**
+These nodes are not just highly connected — they are connected 
+to other influential nodes. In a real marketing context, 
+targeting these customers first with referral incentives would 
+produce the highest network-wide impact at the lowest cost.
 
-### 2. Degree vs PageRank Gap
-Node 14949 had the highest degree centrality but ranked 9th in PageRank.
-This means it has many connections, but to less influential customers.
+This is significantly more efficient than broad-based marketing 
+because influence spreads organically through existing 
+connections.
 
-**Business implication:**
-Raw connection count alone is a misleading targeting metric. PageRank-based
-targeting is more cost-efficient because it accounts for the quality of connections,
-not just the quantity.
+---
 
-### 3. Community Segmentation
-Label propagation detected distinct organic customer communities formed purely
-from co-purchase behaviour — not manually defined demographic segments.
+### 2. Customer Segmentation
+- Total organic segments detected: 24,717
+- Largest segment size: 1,180 customers
+- Top 10 segments range from 386 to 1,180 members
 
-**Business implication:**
-Each community likely represents a product interest cluster (e.g. tech buyers,
-book readers, home goods). These communities enable personalised campaign messaging
-without needing survey data or demographic profiling.
+**Business Implication:**
+These segments formed purely from purchase behaviour — not 
+demographics or manual labelling. Each community likely 
+represents a distinct product interest cluster (e.g. tech 
+buyers, book readers, home goods).
 
-### 4. Triangle Counting as a Loyalty Signal
-Nodes with high triangle counts are deeply embedded in tightly-knit clusters,
-meaning their neighbours also know each other.
+A business can assign a different marketing message to each 
+community, improving conversion rates compared to one-size-
+fits-all campaigns.
 
-**Business implication:**
-High triangle count correlates with customer loyalty and retention. These nodes
-are least likely to churn and most likely to respond positively to loyalty rewards.
-They also act as trust anchors within their community — their endorsement carries
-more weight than that of peripheral nodes.
+---
+
+### 3. Triangle Counting and Customer Loyalty
+**[ADD YOUR TRIANGLE COUNT NUMBERS HERE]**
+
+**Business Implication:**
+Nodes with high triangle counts are embedded in tight, 
+interconnected clusters. In business terms, these customers 
+are part of highly loyal peer groups where purchase decisions 
+are mutually reinforced.
+
+These nodes are ideal targets for:
+- Loyalty and retention campaigns
+- Premium membership offers
+- Word-of-mouth referral programs
+
+Targeting high-triangle nodes for retention is more cost 
+effective than acquiring new customers, since their 
+interconnected peers are likely to follow their behaviour.
+
+---
+
+### 4. PageRank vs Degree Centrality — Strategic Distinction
+
+| Node  | Degree Centrality | PageRank | Strategy |
+|-------|-------------------|----------|----------|
+| 14949 | Highest           | 9th      | High reach, lower quality connections |
+| 4429  | 2nd               | 1st      | Prime target — high reach + high influence |
+| 33    | 3rd               | 2nd      | Prime target — consistent across both metrics |
+
+**Business Implication:**
+Not all highly connected customers are equal. PageRank 
+identifies customers whose connections are themselves 
+influential — these are the ones whose recommendations 
+carry the most weight in their network.
 
 ---
 
 ## Strategic Recommendations
 
-| Strategy | Target Nodes | Basis |
-|---|---|---|
-| Referral campaign | High PageRank nodes | Quality influence reach |
-| Loyalty rewards | High triangle count nodes | Embedded trust clusters |
-| Cross-sell campaigns | Community bridge nodes | High betweenness centrality |
-| Personalised messaging | Community-level targeting | Organic behavioural segments |
+1. **Prioritise nodes 4429 and 33** for referral and 
+   ambassador programs — highest combined influence score.
+
+2. **Segment marketing campaigns** by community — each of 
+   the top 10 communities represents a distinct customer 
+   interest cluster requiring a tailored message.
+
+3. **Use triangle density as a loyalty proxy** — high 
+   triangle count nodes are deeply embedded in peer groups 
+   and respond better to retention offers than acquisition 
+   campaigns.
+
+4. **Combine PageRank + degree centrality** for targeting 
+   decisions — neither metric alone is sufficient. Nodes 
+   ranking highly on both are the most valuable marketing 
+   targets.
 
 ---
 
-## Why Graph Analytics Over Traditional Segmentation
-
-Traditional segmentation relies on demographics (age, location, income).
-Graph-based segmentation uses actual purchase behaviour and social structure.
-
-The result is segments that are:
-- More predictive of future behaviour
-- Actionable without expensive survey data
-- Dynamically updatable as new purchase data arrives
+## Conclusion
+Graph-based customer analysis reveals structural insights 
+that traditional demographic segmentation cannot capture. 
+By treating purchase behaviour as a network, businesses can 
+identify influence pathways, organic segments, and loyalty 
+clusters — enabling more precise, cost-effective marketing 
+strategies.
